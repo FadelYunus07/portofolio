@@ -2,8 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import HomePage from "./pages/HomePage";
-import EducationPage from "./pages/EducationPage";
-import ProjectPage from "./pages/ProjectPage";
+import SkillPage from "./pages/SkillPage";
+import PortfolioPage from "./pages/PortfolioPage";
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
 
@@ -18,8 +18,8 @@ function App() {
       <NavbarComponent />
       <Routes>
         <Route path="/" Component={HomePage} />
-        <Route path="/education" Component={EducationPage} />
-        <Route path="/project" Component={ProjectPage} />
+        <Route path="/skill" Component={SkillPage} />
+        <Route path="/project" Component={PortfolioPage} />
       </Routes>
       <FooterComponent />
     </div>

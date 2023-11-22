@@ -38,26 +38,19 @@ const NavbarComponent = () => {
 
   return (
     <div>
-      <Navbar fixed="top" expand="lg d-flex" className={changeColor ? "color-active" : ""}>
+      <Navbar fixed="top" expand="lg d-flex py-4" className={changeColor ? "color-active" : ""}>
         <Container>
           <Navbar.Brand className="fw-bold" href="#home">
-            Curyculum Vitae.
+            <span className="text-light">My</span>
+            <span className="text-dark">Portfolio</span>
+            <span className="text-light">.</span>
           </Navbar.Brand>
-          <div>
-            {/* Animasi Mata */}
-            <svg width="30" height="30" class="eye">
-              <circle cx="15" cy="15" r="15" class="eyeball" />
-              <circle cx="15" cy="15" r="8" class="pupil" />
-            </svg>
-            {/* Akhir Animasi Mata */}
-          </div>
-
           <Navbar.Toggle className={changeColor ? "color-active" : ""} aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mx-auto text-end b-solid">
+            <Nav className="mx-auto">
               {navLinks.map((link) => {
                 return (
-                  <div className="nav-link fw-bold" key={link.id}>
+                  <div className="nav-link" key={link.id}>
                     <NavLink to={link.path} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "active" : "")} end>
                       {link.text}
                     </NavLink>
@@ -66,6 +59,14 @@ const NavbarComponent = () => {
               })}
             </Nav>
           </Navbar.Collapse>
+          <div>
+            {/* Animasi Mata */}
+            <svg width="30" height="30" class="eye">
+              <circle cx="15" cy="15" r="15" class="eyeball" />
+              <circle cx="15" cy="15" r="8" class="pupil" />
+            </svg>
+            {/* Akhir Animasi Mata */}
+          </div>
         </Container>
       </Navbar>
     </div>

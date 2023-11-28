@@ -1,6 +1,6 @@
 import { porto } from "../data/links";
 import { Card, Row, Col } from "react-bootstrap";
-import { Swiper, SwiperSlide, navigation } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";

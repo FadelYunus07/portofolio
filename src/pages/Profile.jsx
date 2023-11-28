@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import fadelUnpam from "../image/fadelunpam2.jpg";
 
 export default function Profile() {
-  const [language, setLanguage] = useState("IDN");
+  const [language, setLanguage] = useState("EN");
 
   const toggleLanguage = () => {
     setLanguage(language === "IDN" ? "EN" : "IDN");
@@ -19,15 +19,16 @@ export default function Profile() {
         <Row>
           <Col className="text-end">
             <a className="togleBahasa" onClick={toggleLanguage}>
-              <span className={profileContent.class}></span>
+              <i className={profileContent.class}></i>
               {profileContent.btn}
             </a>
           </Col>
         </Row>
         <Row>
           <Col className="d-inline">
-            <div className="my-card">
-              <img className="my-photo" src={fadelUnpam} alt="" />
+            <div>
+              <h3 className="hadist">{profileContent.hadist}</h3>
+              <h4 className="hadist">{profileContent.narated}</h4>
             </div>
             <div className=".clearfix"></div>
           </Col>
@@ -44,15 +45,17 @@ export default function Profile() {
 const indonesianProfile = {
   parag:
     "Saya seorang lulusan baru dengan gelar Sarjana Teknik Informatika, bercita-cita tinggi untuk menyumbangkan pemikiran segar dan semangat inovatif dalam dunia teknologi. Dengan fokus utama pada pengembangan Back-end Web, saya juga aktif mempelajari dan memperluas keterampilan Front-end untuk menciptakan solusi yang holistik dan menarik.",
-  btn: "IDN",
-  class: "flag-icon flag-icon-id mx-2",
-  click: "Tekan untuk ganti bahasa",
+  btn: "EN_",
+  class: "flag-icon flag-icon-gb mx-2",
+  hadist: "“Sebaik-baik manusia adalah yang paling banyak manfaatnya bagi manusia”",
+  narated: "--(HR. Ahmad)--",
 };
 
 const englishProfile = {
   parag:
     "I'm a recent graduate with a Bachelor's degree in Computer Engineering, eager to bring fresh perspectives and innovative enthusiasm to the world of technology. While my primary focus lies in Back-end Web development, I'm actively learning and expanding my Front-end skills to create holistic and engaging solutions.",
-  btn: "EN",
-  class: "flag-icon flag-icon-gb mx-2",
-  click: "Click to change the language",
+  btn: "IDN",
+  class: "flag-icon flag-icon-id mx-2",
+  hadist: "“The best of humans are those who are most beneficial to others.”",
+  narated: "--(Narrated by Ahmad)--",
 };

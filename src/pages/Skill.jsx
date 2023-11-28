@@ -1,48 +1,53 @@
 import { useState } from "react";
 import { skill } from "../data/links";
-import { Container, Row, Col, Nav } from "react-bootstrap";
+import { Container, Row, Nav } from "react-bootstrap";
 
 const SkillPage = () => {
-  const [activeCategory, setActiveCategory] = useState("seringDigunakan");
+  const [activeCategory, setActiveCategory] = useState("all");
 
   const handleTabClick = (category) => {
     setActiveCategory(category);
   };
 
-  const filteredSkills = skill.filter((s) => s.category === activeCategory);
+  const filteredSkills = activeCategory === "all" ? skill : skill.filter((s) => s.category === activeCategory);
 
   return (
-    <div className="skills w-100 min-vh-100 py-5">
+    <div className="skills w-100 min-vh-100">
       <Container>
         <Row>
-          <h1 className="text-center my-5">Skills</h1>
+          <h1 className="text-center my-3">
+            <i className="fa fa-fire mx-2"></i>Skills
+          </h1>
+          <p className="w-50 m-auto my-4 text-center">Below are some programming languages, frameworks and tools that I have learned and used.</p>
 
           {/* Add tabs */}
-          <Nav className="justify-content-center" variant="tabs" defaultActiveKey={activeCategory}>
+          <Nav className="justify-content-center pt-5" variant="tabs" defaultActiveKey={activeCategory}>
             <Nav.Item>
-              <Nav.Link eventKey="seringDigunakan" onClick={() => handleTabClick("seringDigunakan")}>
-                Sering Digunakan
+              <Nav.Link eventKey="all" onClick={() => handleTabClick("all")}>
+                All
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="pernahDigunakan" onClick={() => handleTabClick("pernahDigunakan")}>
-                Pernah Digunakan
+              <Nav.Link eventKey="bahasaProgram" onClick={() => handleTabClick("bahasaProgram")}>
+                programming languages
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="tool" onClick={() => handleTabClick("tool")}>
+                Tool, Framework, ect.
               </Nav.Link>
             </Nav.Item>
           </Nav>
 
-          <Row>
+          <Row className="justify-content-center ms-0 p-5">
             {filteredSkills.map((skills) => {
               return (
-                <Col key={skills.id}>
-                  <div className="card-box my-5 shadow">
-                    <h6 className="text-center py-3">{skills.name}</h6>
-                    <div className="image">
-                      <img src={skills.image} alt={skills.name} />
-                      <p className="text-center mt-5">Lorem ipsum, dolor sit amet consectetur</p>
-                    </div>
+                <div key={skills.id} className="card-box shadow">
+                  <div className="image">
+                    <img src={skills.image} alt={skills.name} />
+                    <p>{skills.name}</p>
                   </div>
-                </Col>
+                </div>
               );
             })}
           </Row>

@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <NavbarComponent />
-      <Routes basename="/portofolio/">
+      <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/skill" element={<SkillPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />

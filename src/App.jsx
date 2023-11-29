@@ -6,13 +6,13 @@ import ContactPage from "./pages/ContactPage";
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
 
-import { Routes, Route, Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router basename="/Portofolio">
+    <div>
       <NavbarComponent />
-      <Routes>
+      <Routes basename="/portofolio/">
         <Route path="/" element={<HomePage />} />
         <Route path="/skill" element={<SkillPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
@@ -20,7 +20,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <FooterComponent />
-    </Router>
+    </div>
   );
 }
 

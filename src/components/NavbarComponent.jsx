@@ -38,9 +38,9 @@ const NavbarComponent = () => {
 
   return (
     <div>
-      <Navbar fixed="top" expand="lg d-flex py-4" className={changeColor ? "color-active" : ""}>
+      <Navbar fixed="top" expand="lg d-flex py-3" className={changeColor ? "color-active" : ""}>
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <div className="judul">
               <span className="my">My</span>
               <span className="porto">Portfolio</span>
@@ -60,15 +60,13 @@ const NavbarComponent = () => {
                 );
               })}
             </Nav>
-          </Navbar.Collapse>
-          <div>
             {/* Animasi Mata */}
             <svg width="30" height="30" class="eye">
               <circle cx="15" cy="15" r="15" class="eyeball" />
               <circle cx="15" cy="15" r="8" class="pupil" />
             </svg>
             {/* Akhir Animasi Mata */}
-          </div>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </div>

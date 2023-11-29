@@ -35,6 +35,23 @@ import calc1 from "../image/ibm_calculator/1.jpg";
 import calc2 from "../image/ibm_calculator/2.jpg";
 import calc3 from "../image/ibm_calculator/3.jpg";
 import calc4 from "../image/ibm_calculator/4.jpg";
+import calc5 from "../image/ibm_calculator/5.jpg";
+
+// IMAGE KARYAWAN
+import kar1 from "../image/pencatatan_karyawan/1.png";
+import kar2 from "../image/pencatatan_karyawan/2.png";
+import kar3 from "../image/pencatatan_karyawan/3.png";
+import kar4 from "../image/pencatatan_karyawan/4.png";
+import kar5 from "../image/pencatatan_karyawan/5.png";
+import kar6 from "../image/pencatatan_karyawan/6.png";
+import kar7 from "../image/pencatatan_karyawan/7.png";
+
+// IMAGE QNME
+import qnme1 from "../image/qnme/1.png";
+import qnme2 from "../image/qnme/2.png";
+import qnme3 from "../image/qnme/3.png";
+import qnme4 from "../image/qnme/4.png";
+import qnme5 from "../image/qnme/5.png";
 
 export const navLinks = [
   {
@@ -170,26 +187,36 @@ export const porto = [
     emoji: "fa fa-qrcode fa-5x",
     title: "Absensi QR Code",
     text: "Sistem Absensi dengan menggunakan QR code sebagai media pencatatan kehadiran Siswa dan Guru (Skripsi)",
+    fitur: [
+      "Scanner Bagi Siswa dan Guru yang akan melakukan Absensi",
+      "Kehadiran Siswa dan Guru (Mencatat kehadiran Siswa dan Guru yang akan dibandingkan titik lokasi QR Code dengan lokasi perangkat)",
+      "Absensi Kelas Siswa Dan Guru (Mencatat kehadiran siswa dan guru dalam ruagan kelas, QR Code Dinamis untuk mencegah kecurangan)",
+      "Auto Generate QR Code Kelas Senin - jum'at dan sesuai Jam Mata Pelajaran",
+      "Crud Master Kelas, Anggota Kelas, Guru",
+    ],
   },
   {
     id: 2,
-    allImg: [calc1, calc2, calc2, calc4],
+    allImg: [calc1, calc2, calc3, calc4, calc5],
     emoji: "fa fa-calculator fa-5x",
-    title: "Kalkulator IDM",
+    title: "Kalkulator IBM",
     text: "Aplikasi kalkulator yang menghitung tingkat obesitas seseorang (Latihan)",
+    fitur: ["Input Angka Berat Badan (Kg)", "Input Angka Tinggi Badan (Cm)", "Hasil Perhitungan", "Notifikasi Normal/Healthy, Overweight, Underweight, Obese"],
   },
   {
     id: 3,
-    allImg: [porto1, porto2, porto3, porto4, porto5, porto6, porto7, porto8, porto9, porto10, porto11, porto12],
+    allImg: [kar1, kar2, kar3, kar4, kar5, kar6, kar7],
     emoji: "fa fa-address-book fa-5x",
     title: "Sistem Pencatatan Karyawan",
     text: "Sistem yang digunakan untuk pencatatan karyawan Indomart (KP Berkelompok)",
+    fitur: ["Crud User", "Dashboard", "CRUD Data KK, Data Karyawan, Mutasi,Galeri,dll", "Laporan"],
   },
   {
     id: 4,
-    allImg: [porto1, porto2, porto3, porto4, porto5, porto6, porto7, porto8, porto9, porto10, porto11, porto12],
+    allImg: [qnme1, qnme2, qnme3, qnme4, qnme5],
     emoji: "fa fa-gem fa-5x",
     title: "QnMe Luxury",
     text: "Sebuah Landing Page untuk brand Skincare (Ongoing)",
+    fitur: ["Menampilkan Produk", "Contact", "Testimonial", "Faq", "(ONGOING)"],
   },
 ];

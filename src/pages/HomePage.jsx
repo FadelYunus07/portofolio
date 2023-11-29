@@ -1,13 +1,16 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Profile from "./Profile";
-import Skill from "./Skill";
+import Skill from "./SkillPage";
 import PortfolioPage from "./PortfolioPage";
-import Image1 from "../image/fadelcrop.png";
+import Image1 from "../image/fadelcrop.jpg";
+import ContactPage from "./ContactPage";
+import ScrollToTop from "../components/ScrollToTop";
 
 const HomePage = () => {
   return (
     <>
-      <div className="homepage" id="home">
+      <ScrollToTop />
+      <div className="homepage" id="root">
         <header className="w-100 min-vh-100 d-flex align-items-center">
           <Container>
             <Row className="header-box d-flex align-items-center">
@@ -48,6 +51,9 @@ const HomePage = () => {
         {/* PORTFOLIO PAGE */}
         <PortfolioPage />
         {/* END PORTFOLIO PAGE */}
+        {/* CONTACT PAGE */}
+        <ContactPage />
+        {/* END CONTACT PAGE */}
       </div>
     </>
   );

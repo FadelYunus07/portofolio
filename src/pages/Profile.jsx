@@ -25,14 +25,14 @@ export default function Profile() {
           </Col>
         </Row>
         <Row>
-          <Col className="d-inline">
-            <div>
-              <h3 className="hadist">{profileContent.hadist}</h3>
-              <h4 className="hadist">{profileContent.narated}</h4>
+          <Col xs={12} md={6}>
+            <div className="hadist">
+              <h4>{profileContent.hadist}</h4>
+              <h4>{profileContent.narated}</h4>
             </div>
             <div className=".clearfix"></div>
           </Col>
-          <Col className="profile-text my-auto">
+          <Col xs={12} md={6} className="profile-text my-auto">
             <h3>Fadel Yunus Mahrus</h3>
             <p>{profileContent.parag}</p>
           </Col>

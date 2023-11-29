@@ -6,11 +6,11 @@ import ContactPage from "./pages/ContactPage";
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <Router basename="/Portofolio">
       <NavbarComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -20,7 +20,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <FooterComponent />
-    </div>
+    </Router>
   );
 }
 

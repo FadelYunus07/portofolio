@@ -14,7 +14,7 @@ const PortfolioPage = () => {
     <>
       <ScrollToTop />
       <div className="portfolio w-100 text-center">
-        <h2 className="py-5">
+        <h2 className="py-5" data-aos="fade-up" data-aos-duration="1000">
           <i className="fa fa-book mx-3"></i>Portfolio
         </h2>
         <Swiper
@@ -45,7 +45,7 @@ const PortfolioPage = () => {
           className="mySwiper"
         >
           {porto.map((port) => (
-            <SwiperSlide key={port.id}>
+            <SwiperSlide key={port.id} data-aos="flip-right" data-aos-duration="1000">
               <Card className="shadow-sm">
                 <i className={`emoji ${port.emoji}`}></i>
                 <Card.Body>

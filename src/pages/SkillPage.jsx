@@ -17,7 +17,7 @@ const SkillPage = () => {
       <ScrollToTop />
       <div className="skills w-100">
         <Container>
-          <Row>
+          <Row data-aos="fade-up" data-aos-duration="1000">
             <h1 className="text-center my-3">
               <i className="fa fa-fire mx-2"></i>Skills
             </h1>
@@ -41,19 +41,19 @@ const SkillPage = () => {
                 </Nav.Link>
               </Nav.Item>
             </Nav>
+          </Row>
 
-            <Row className="justify-content-center ms-0 p-5">
-              {filteredSkills.map((skills) => {
-                return (
-                  <div key={skills.id} className="card-box shadow">
-                    <div className="image">
-                      <img src={skills.image} alt={skills.name} />
-                      <p>{skills.name}</p>
-                    </div>
+          <Row className="justify-content-center ms-0 p-5">
+            {filteredSkills.map((skills) => {
+              return (
+                <div key={skills.id} className="card-box shadow" data-aos="flip-left" data-aos-duration="1000">
+                  <div className="image">
+                    <img src={skills.image} alt={skills.name} />
+                    <p>{skills.name}</p>
                   </div>
-                );
-              })}
-            </Row>
+                </div>
+              );
+            })}
           </Row>
         </Container>
       </div>

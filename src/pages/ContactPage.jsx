@@ -42,10 +42,10 @@ const ContactPage = () => {
       <ScrollToTop />
       <div className="contact w-100 text-center">
         <Container>
-          <Row>
+          <Row data-aos="fade-right" data-aos-duration="1000">
             <h2>CONTACT ME</h2>
           </Row>
-          <Row>
+          <Row data-aos="flip-right" data-aos-duration="1000">
             <div>
               <form ref={form} onSubmit={sendEmail} className="contact-form">
                 <label className="form-label">Name</label>

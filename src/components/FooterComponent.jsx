@@ -1,11 +1,11 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 const FooterComponent = () => {
   return (
     <div className="footer text-center">
-      <Container>
+      <Container data-aos="fade-down" data-aos-duration="1000">
         <Row>
-          <div className="">
+          <div>
             <a className="btn-li" href="https://www.linkedin.com/in/fadel-yunus-77557a1a7">
               <i className="fa-brands fa-linkedin fa-2x"></i>
             </a>

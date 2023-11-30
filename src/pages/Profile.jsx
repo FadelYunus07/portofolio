@@ -12,7 +12,7 @@ export default function Profile() {
   const profileContent = language === "IDN" ? indonesianProfile : englishProfile;
   return (
     <div className="profile w-100 min-vh-100">
-      <Container className="">
+      <Container data-aos="fade-down" data-aos-duration="1000">
         <h1 className="text-center mb-5">
           <i className="fa-solid fa-user mx-3"></i>Profile
         </h1>
@@ -26,13 +26,13 @@ export default function Profile() {
         </Row>
         <Row>
           <Col xs={12} md={6}>
-            <div className="hadist">
+            <div className="hadist" data-aos="fade-right" data-aos-duration="1000">
               <h4>{profileContent.hadist}</h4>
               <h4>{profileContent.narated}</h4>
             </div>
             <div className=".clearfix"></div>
           </Col>
-          <Col xs={12} md={6} className="profile-text my-auto">
+          <Col xs={12} md={6} className="profile-text my-auto" data-aos="fade-left" data-aos-duration="1000">
             <h3>Fadel Yunus Mahrus</h3>
             <p>{profileContent.parag}</p>
           </Col>

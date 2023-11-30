@@ -49,13 +49,13 @@ const ContactPage = () => {
             <div>
               <form ref={form} onSubmit={sendEmail} className="contact-form">
                 <label className="form-label">Name</label>
-                <input type="text" name="user_name" value={formData.user_name} onChange={handleInputChange} />
+                <input type="text" name="user_name" value={formData.user_name} onChange={handleInputChange} required />
 
                 <label className="form-label">Email</label>
-                <input type="email" name="user_email" value={formData.user_email} onChange={handleInputChange} />
+                <input type="email" name="user_email" value={formData.user_email} onChange={handleInputChange} required />
 
                 <label className="form-label">Message</label>
-                <textarea name="message" value={formData.message} onChange={handleInputChange} />
+                <textarea name="message" value={formData.message} onChange={handleInputChange} required />
 
                 <input type="submit" value="Send" className="submit-btn" />
               </form>

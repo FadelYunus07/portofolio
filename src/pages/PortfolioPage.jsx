@@ -18,6 +18,7 @@ const PortfolioPage = () => {
           <i className="fa fa-book mx-3"></i>Portfolio
         </h2>
         <Swiper
+          data-aos="flip-right" data-aos-duration="1000"
           navigation={true}
           pagination={{
             clickable: true,
@@ -45,7 +46,7 @@ const PortfolioPage = () => {
           className="mySwiper"
         >
           {porto.map((port) => (
-            <SwiperSlide key={port.id} data-aos="flip-right" data-aos-duration="1000">
+            <SwiperSlide key={port.id}>
               <Card className="shadow-sm">
                 <i className={`emoji ${port.emoji}`}></i>
                 <Card.Body>

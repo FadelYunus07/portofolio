@@ -18,7 +18,8 @@ const PortfolioPage = () => {
           <i className="fa fa-book mx-3"></i>Portfolio
         </h2>
         <Swiper
-          data-aos="flip-right" data-aos-duration="1000"
+          data-aos="flip-right"
+          data-aos-duration="1000"
           navigation={true}
           pagination={{
             clickable: true,

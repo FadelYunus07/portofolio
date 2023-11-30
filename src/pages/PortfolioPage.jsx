@@ -13,7 +13,7 @@ const PortfolioPage = () => {
   return (
     <>
       <ScrollToTop />
-      <div className="portfolio w-100 min-vh-100 text-center">
+      <div className="portfolio w-100 text-center">
         <h2 className="py-5">
           <i className="fa fa-book mx-3"></i>Portfolio
         </h2>

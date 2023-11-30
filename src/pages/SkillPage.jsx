@@ -15,7 +15,7 @@ const SkillPage = () => {
   return (
     <>
       <ScrollToTop />
-      <div className="skills w-100 min-vh-100">
+      <div className="skills w-100">
         <Container>
           <Row>
             <h1 className="text-center my-3">

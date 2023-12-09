@@ -237,7 +237,7 @@ export const porto = [
   {
     id: 5,
     allImg: [noobar1, noobar2, noobar3, noobar4, noobar5, noobar6, noobar7, noobar8, noobar9],
-    emoji: "fa fa-gem fa-5x",
+    emoji: "fa fa-film fa-5x",
     title: "Noobar",
     text: "Sebuah Website Catalog Movies",
     link: "https://fadelyunus07.github.io/noobar-react/",

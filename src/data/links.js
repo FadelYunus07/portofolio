@@ -53,6 +53,17 @@ import qnme3 from "../image/qnme/3.png";
 import qnme4 from "../image/qnme/4.png";
 import qnme5 from "../image/qnme/5.png";
 
+// IMAGE NOOBAR
+import noobar1 from "../image/noobar/1.png";
+import noobar2 from "../image/noobar/2.png";
+import noobar3 from "../image/noobar/3.png";
+import noobar4 from "../image/noobar/4.png";
+import noobar5 from "../image/noobar/5.png";
+import noobar6 from "../image/noobar/6.png";
+import noobar7 from "../image/noobar/7.png";
+import noobar8 from "../image/noobar/8.png";
+import noobar9 from "../image/noobar/9.png";
+
 export const navLinks = [
   {
     id: 1,
@@ -187,6 +198,7 @@ export const porto = [
     emoji: "fa fa-qrcode fa-5x",
     title: "Absensi QR Code",
     text: "Sistem Absensi dengan menggunakan QR code sebagai media pencatatan kehadiran Siswa dan Guru (Skripsi)",
+    link: "",
     fitur: [
       "Scanner Bagi Siswa dan Guru yang akan melakukan Absensi",
       "Kehadiran Siswa dan Guru (Mencatat kehadiran Siswa dan Guru yang akan dibandingkan titik lokasi QR Code dengan lokasi perangkat)",
@@ -201,6 +213,7 @@ export const porto = [
     emoji: "fa fa-calculator fa-5x",
     title: "Kalkulator IBM",
     text: "Aplikasi kalkulator yang menghitung tingkat obesitas seseorang (Latihan)",
+    link: "",
     fitur: ["Input Angka Berat Badan (Kg)", "Input Angka Tinggi Badan (Cm)", "Hasil Perhitungan", "Notifikasi Normal/Healthy, Overweight, Underweight, Obese"],
   },
   {
@@ -209,6 +222,7 @@ export const porto = [
     emoji: "fa fa-address-book fa-5x",
     title: "Sistem Pencatatan Karyawan",
     text: "Sistem yang digunakan untuk pencatatan karyawan Indomart (KP Berkelompok)",
+    link: "",
     fitur: ["Crud User", "Dashboard", "CRUD Data KK, Data Karyawan, Mutasi,Galeri,dll", "Laporan"],
   },
   {
@@ -217,6 +231,16 @@ export const porto = [
     emoji: "fa fa-gem fa-5x",
     title: "QnMe Luxury",
     text: "Sebuah Landing Page untuk brand Skincare (Ongoing)",
+    link: "",
     fitur: ["Menampilkan Produk", "Contact", "Testimonial", "Faq", "(ONGOING)"],
+  },
+  {
+    id: 5,
+    allImg: [noobar1, noobar2, noobar3, noobar4, noobar5, noobar6, noobar7, noobar8, noobar9],
+    emoji: "fa fa-gem fa-5x",
+    title: "Noobar",
+    text: "Sebuah Website Catalog Movies",
+    link: "https://fadelyunus07.github.io/noobar-react/",
+    fitur: ["Menampilkan Movie", "Menampilkan TV Series", "Pencarian", "Trailer", "Preview Film"],
   },
 ];

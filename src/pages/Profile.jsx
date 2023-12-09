@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import fadelUnpam from "../image/fadelunpam2.jpg";
 
 export default function Profile() {
   const [language, setLanguage] = useState("EN");

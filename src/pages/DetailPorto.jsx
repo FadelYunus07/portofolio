@@ -1,5 +1,5 @@
 import { porto } from "../data/links";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col, Button } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation } from "swiper/modules";
 
@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
 
 // SwiperCore.use([Navigation, Pagination]);
@@ -75,6 +75,11 @@ const DetailPorto = () => {
             <div className="detail-content">
               <h3>{selectedPorto.title}</h3>
               <p>{selectedPorto.text}</p>
+              {selectedPorto.link && (
+                <Button className="mb-3" href={selectedPorto.link}>
+                  Kunjungi
+                </Button>
+              )}
               <h5>Fitur:</h5>
               {selectedPorto.fitur.map((fitur, index) => (
                 <ul key={index}>

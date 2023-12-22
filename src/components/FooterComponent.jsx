@@ -3,7 +3,7 @@ import { Container, Row } from "react-bootstrap";
 const FooterComponent = () => {
   return (
     <div className="footer text-center">
-      <Container data-aos="fade-down" data-aos-duration="1000">
+      <Container data-aos="fade-left" data-aos-duration="1000">
         <Row>
           <div>
             <a className="btn-li" href="https://www.linkedin.com/in/fadel-yunus-77557a1a7">

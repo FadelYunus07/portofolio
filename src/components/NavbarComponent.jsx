@@ -40,12 +40,14 @@ const NavbarComponent = () => {
     <div>
       <Navbar fixed="top" expand="lg d-flex py-3" className={changeColor ? "color-active" : ""}>
         <Container>
-          <Navbar.Brand href="/">
-            <div className="judul">
-              <span className="my">My</span>
-              <span className="porto">Portfolio</span>
-              <span className="titik">.</span>
-            </div>
+          <Navbar.Brand>
+            <NavLink to={""} className="judul">
+              <div>
+                <span className="my">My</span>
+                <span className="porto">Portfolio</span>
+                <span className="titik">.</span>
+              </div>
+            </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle className={changeColor ? "color-active" : ""} aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

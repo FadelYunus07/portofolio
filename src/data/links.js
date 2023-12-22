@@ -15,6 +15,7 @@ import image14 from "../image/python.svg";
 import image15 from "../image/api.svg";
 import image16 from "../image/github.svg";
 import image17 from "../image/kotlin.svg";
+import image18 from "../image/tailwind.svg";
 
 // IMAGE PORTO
 import porto1 from "../image/absenqr/1.png";
@@ -188,6 +189,12 @@ export const skill = [
     image: image17,
     category: "bahasaProgram",
   },
+  {
+    id: 18,
+    name: "Tailwind",
+    image: image18,
+    category: "tool",
+  },
 ];
 
 export const porto = [
@@ -199,6 +206,7 @@ export const porto = [
     title: "Absensi QR Code",
     text: "Sistem Absensi dengan menggunakan QR code sebagai media pencatatan kehadiran Siswa dan Guru (Skripsi)",
     link: "",
+    tekno: ["Laravel", "HTML", "CSS", "MySQL", "PHP", "Bootstrap", "JavaScript"],
     fitur: [
       "Scanner Bagi Siswa dan Guru yang akan melakukan Absensi",
       "Kehadiran Siswa dan Guru (Mencatat kehadiran Siswa dan Guru yang akan dibandingkan titik lokasi QR Code dengan lokasi perangkat)",
@@ -214,6 +222,7 @@ export const porto = [
     title: "Kalkulator IBM",
     text: "Aplikasi kalkulator yang menghitung tingkat obesitas seseorang (Latihan)",
     link: "",
+    tekno: ["Kotlin", "Android Studio"],
     fitur: ["Input Angka Berat Badan (Kg)", "Input Angka Tinggi Badan (Cm)", "Hasil Perhitungan", "Notifikasi Normal/Healthy, Overweight, Underweight, Obese"],
   },
   {
@@ -223,6 +232,7 @@ export const porto = [
     title: "Sistem Pencatatan Karyawan",
     text: "Sistem yang digunakan untuk pencatatan karyawan Indomart (KP Berkelompok)",
     link: "",
+    tekno: ["Laravel", "HTML", "CSS", "MySQL", "PHP", "JavaScript", "Bootstrap"],
     fitur: ["Crud User", "Dashboard", "CRUD Data KK, Data Karyawan, Mutasi,Galeri,dll", "Laporan"],
   },
   {
@@ -232,6 +242,7 @@ export const porto = [
     title: "QnMe Luxury",
     text: "Sebuah Landing Page untuk brand Skincare (Ongoing)",
     link: "",
+    tekno: ["React", "HTML", "CSS", "Bootstrap", "JavaScript"],
     fitur: ["Menampilkan Produk", "Contact", "Testimonial", "Faq", "(ONGOING)"],
   },
   {
@@ -241,6 +252,7 @@ export const porto = [
     title: "Noobar",
     text: "Sebuah Website Catalog Movies",
     link: "https://fadelyunus07.github.io/noobar-react/",
+    tekno: ["React", "JavaScript", "Tailwind", "API"],
     fitur: ["Menampilkan Movie", "Menampilkan TV Series", "Pencarian", "Trailer", "Preview Film"],
   },
 ];

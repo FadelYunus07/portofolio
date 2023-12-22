@@ -25,7 +25,7 @@ export default function Profile() {
         </Row>
         <Row>
           <Col xs={12} md={6}>
-            <div className="hadist" data-aos="fade-right" data-aos-duration="1000">
+            <div className="hadist text-center" data-aos="fade-right" data-aos-duration="1000">
               <h4>{profileContent.hadist}</h4>
               <h4>{profileContent.narated}</h4>
             </div>

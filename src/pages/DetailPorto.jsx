@@ -1,4 +1,4 @@
-import { porto } from "../data/links";
+import { porto, skill } from "../data/links";
 import { Card, Row, Col, Button } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation } from "swiper/modules";
@@ -22,6 +22,11 @@ const DetailPorto = () => {
   if (!selectedPorto) {
     return <div>Portfolio not found</div>;
   }
+
+  const getSkillImage = (technology) => {
+    const matchedSkill = skill.find((s) => s.name === technology);
+    return matchedSkill ? matchedSkill.image : null;
+  };
 
   return (
     <>
@@ -86,6 +91,12 @@ const DetailPorto = () => {
                   <li>{fitur}</li>
                 </ul>
               ))}
+              <h5>Using:</h5>
+              <div className="skill">
+                {selectedPorto.tekno.map((technology, index) => (
+                  <span key={index}>{getSkillImage(technology) && <img src={getSkillImage(technology)} alt={`${technology} skill`} className="icon" />}</span>
+                ))}
+              </div>
             </div>
           </Col>
         </Row>

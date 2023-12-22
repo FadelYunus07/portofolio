@@ -12,7 +12,7 @@ const HomePage = () => {
       <ScrollToTop />
       <div className="homepage" id="root">
         <header className="w-100 min-vh-100 d-flex align-items-center">
-          <Container>
+          <Container className="">
             <Row className="header-box d-flex align-items-center">
               <Col className="text-center m-4">
                 <img src={Image1} alt="fadel1" />

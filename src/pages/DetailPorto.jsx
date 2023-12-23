@@ -93,9 +93,11 @@ const DetailPorto = () => {
               ))}
               <h5>Using:</h5>
               <div className="skill">
-                {selectedPorto.tekno.map((technology, index) => (
-                  <span key={index}>{getSkillImage(technology) && <img src={getSkillImage(technology)} alt={`${technology} skill`} className="icon" />}</span>
-                ))}
+                <Row className="justify-content-center ms-0 p-5 gap-3" md={4} sm={6} xs={3} lg={4}>
+                  {selectedPorto.tekno.map((technology, index) => (
+                    <span key={index}>{getSkillImage(technology) && <img src={getSkillImage(technology)} alt={`${technology} skill`} className="icon" />}</span>
+                  ))}
+                </Row>
               </div>
             </div>
           </Col>

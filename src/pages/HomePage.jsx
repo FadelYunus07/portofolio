@@ -21,7 +21,7 @@ const HomePage = () => {
                 <p>Hello, I'm</p>
                 <h1>Fadel Yunus Mahrus</h1>
                 <div className="my-3">
-                  <a className="btn-cv" href="./cv_fadel.pdf" download="FadelYunus_CV.pdf">
+                  <a className="btn-cv" href="./CV Fadel Yunus Mahrus.pdf" download="FadelYunus_CV.pdf">
                     Download CV
                     <i className="ps-1 fa fa-chevron-down"></i>
                   </a>

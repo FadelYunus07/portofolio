@@ -1,10 +1,12 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../data/links";
 
 const NavbarComponent = () => {
   const [changeColor, setChangeColor] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
   const changeBackgroundColor = () => {
     if (window.scrollY > 10) {
       setChangeColor(true);
@@ -12,6 +14,7 @@ const NavbarComponent = () => {
       setChangeColor(false);
     }
   };
+
   useEffect(() => {
     changeBackgroundColor();
     window.addEventListener("scroll", changeBackgroundColor);
@@ -34,11 +37,11 @@ const NavbarComponent = () => {
       pupil.style.transform = `translateX(${R - r + "px"}) rotate(${angle + "deg"})`;
       pupil.style.transformOrigin = `${r + "px"} center`;
     });
-  }, []); // Menggunakan array kosong untuk memastikan hanya dijalankan sekali saat komponen dimuat
+  }, []);
 
   return (
     <div>
-      <Navbar fixed="top" expand="lg d-flex py-3" className={changeColor ? "color-active" : ""}>
+      <Navbar fixed="top" expanded={expanded} expand="lg d-flex py-3" className={changeColor ? "color-active" : ""}>
         <Container>
           <Navbar.Brand>
             <NavLink to={""} className="judul">
@@ -49,13 +52,13 @@ const NavbarComponent = () => {
               </div>
             </NavLink>
           </Navbar.Brand>
-          <Navbar.Toggle className={changeColor ? "color-active" : ""} aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle className={changeColor ? "color-active" : ""} aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
               {navLinks.map((link) => {
                 return (
                   <div className="nav-link" key={link.id}>
-                    <NavLink to={link.path} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "active" : "")} end>
+                    <NavLink onClick={() => setExpanded(false)} to={link.path} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "active" : "")} end>
                       {link.text}
                     </NavLink>
                   </div>
@@ -63,9 +66,9 @@ const NavbarComponent = () => {
               })}
             </Nav>
             {/* Animasi Mata */}
-            <svg width="30" height="30" class="eye">
-              <circle cx="15" cy="15" r="15" class="eyeball" />
-              <circle cx="15" cy="15" r="8" class="pupil" />
+            <svg width="30" height="30" className="eye">
+              <circle cx="15" cy="15" r="15" className="eyeball" />
+              <circle cx="15" cy="15" r="8" className="pupil" />
             </svg>
             {/* Akhir Animasi Mata */}
           </Navbar.Collapse>

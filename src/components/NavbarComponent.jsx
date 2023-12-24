@@ -68,7 +68,7 @@ const NavbarComponent = () => {
             {/* Animasi Mata */}
             <svg width="30" height="30" className="eye">
               <circle cx="15" cy="15" r="15" className="eyeball" />
-              <circle cx="15" cy="15" r="8" className="pupil" />
+              <circle cx="15" cy="15" r="6" className="pupil" />
             </svg>
             {/* Akhir Animasi Mata */}
           </Navbar.Collapse>

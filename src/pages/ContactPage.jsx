@@ -40,7 +40,7 @@ const ContactPage = () => {
   return (
     <>
       <ScrollToTop />
-      <div className="contact w-100 text-center">
+      <div className="contact w-100 min-vh-100 text-center">
         <Container>
           <Row data-aos="fade-right" data-aos-duration="1000">
             <h2>CONTACT ME</h2>

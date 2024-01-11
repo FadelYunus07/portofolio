@@ -30,7 +30,7 @@ const HomePage = () => {
                     <i className="fa-brands fa-linkedin fa-lg"></i>
                   </a>
                 </div>
-                <div className="m-2">
+                <div>
                   <a className="gh" href="https://github.com/FadelYunus07">
                     <i className="m-1 fa-brands fa-github fa-2x"></i>
                   </a>

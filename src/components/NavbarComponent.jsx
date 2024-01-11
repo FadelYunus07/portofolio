@@ -8,12 +8,20 @@ const NavbarComponent = () => {
   const [expanded, setExpanded] = useState(false);
 
   const changeBackgroundColor = () => {
-    if (window.scrollY > 10) {
-      setChangeColor(true);
-    } else {
-      setChangeColor(false);
-    }
+    setChangeColor(window.scrollY > 10);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      changeBackgroundColor();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     changeBackgroundColor();
@@ -41,7 +49,7 @@ const NavbarComponent = () => {
 
   return (
     <div>
-      <Navbar fixed="top" expanded={expanded} expand="lg d-flex py-3" className={changeColor ? "color-active" : ""}>
+      <Navbar fixed="top" expanded={expanded} expand="lg" className={`d-flex ${changeColor ? "color-active" : ""}`}>
         <Container>
           <Navbar.Brand>
             <NavLink to={""} className="judul">
@@ -54,24 +62,26 @@ const NavbarComponent = () => {
           </Navbar.Brand>
           <Navbar.Toggle className={changeColor ? "color-active" : ""} aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mx-auto">
-              {navLinks.map((link) => {
-                return (
-                  <div className="nav-link" key={link.id}>
-                    <NavLink onClick={() => setExpanded(false)} to={link.path} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "active" : "")} end>
-                      {link.text}
-                    </NavLink>
-                  </div>
-                );
-              })}
-            </Nav>
-            {/* Animasi Mata */}
-            <svg width="30" height="30" className="eye">
-              <circle cx="15" cy="15" r="15" className="eyeball" />
-              <circle cx="15" cy="15" r="6" className="pupil" />
-            </svg>
+            <div>
+              <Nav className="mx-auto">
+                {navLinks.map((link) => {
+                  return (
+                    <div className="nav-link" key={link.id}>
+                      <NavLink onClick={() => setExpanded(false)} to={link.path} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "active" : "")} end>
+                        {link.text}
+                      </NavLink>
+                    </div>
+                  );
+                })}
+              </Nav>
+              {/* Animasi Mata */}
+            </div>
             {/* Akhir Animasi Mata */}
           </Navbar.Collapse>
+          <svg width="30" height="30" className="eye">
+            <circle cx="15" cy="15" r="15" className="eyeball" />
+            <circle cx="15" cy="15" r="6" className="pupil" />
+          </svg>
         </Container>
       </Navbar>
     </div>

@@ -13,13 +13,11 @@ const PortfolioPage = () => {
   return (
     <>
       <ScrollToTop />
-      <div className="portfolio w-100 min-vh-100 text-center">
-        <h2 className="py-5" data-aos="fade-up" data-aos-duration="1000">
+      <div className="portfolio w-200 min-vh-100 text-center">
+        <h2 className="py-1">
           <i className="fa fa-book mx-3"></i>Portfolio
         </h2>
         <Swiper
-          data-aos="flip-right"
-          data-aos-duration="1000"
           navigation={true}
           pagination={{
             clickable: true,

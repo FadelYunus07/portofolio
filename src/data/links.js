@@ -65,6 +65,14 @@ import noobar7 from "../image/noobar/7.png";
 import noobar8 from "../image/noobar/8.png";
 import noobar9 from "../image/noobar/9.png";
 
+// IMAGE KREATIF MEDIATAMA
+import kreatif1 from "../image/kreatifmediatama/km1.png";
+import kreatif2 from "../image/kreatifmediatama/km2.png";
+import kreatif3 from "../image/kreatifmediatama/km3.png";
+import kreatif4 from "../image/kreatifmediatama/km4.png";
+import kreatif5 from "../image/kreatifmediatama/km5.png";
+import kreatif6 from "../image/kreatifmediatama/km6.png";
+
 export const navLinks = [
   {
     id: 1,
@@ -141,56 +149,56 @@ export const skill = [
     image: image9,
     category: "tool",
   },
+  // {
+  //   id: 10,
+  //   name: "Node JS",
+  //   image: image10,
+  //   category: "tool",
+  // },
+  // {
+  //   id: 11,
+  //   name: "Java",
+  //   image: image11,
+  //   category: "bahasaProgram",
+  // },
+  // {
+  //   id: 12,
+  //   name: "C++",
+  //   image: image12,
+  //   category: "bahasaProgram",
+  // },
   {
     id: 10,
-    name: "Node JS",
-    image: image10,
-    category: "tool",
-  },
-  {
-    id: 11,
-    name: "Java",
-    image: image11,
-    category: "bahasaProgram",
-  },
-  {
-    id: 12,
-    name: "C++",
-    image: image12,
-    category: "bahasaProgram",
-  },
-  {
-    id: 13,
     name: "PHP",
     image: image13,
     category: "bahasaProgram",
   },
+  // {
+  //   id: 14,
+  //   name: "Python",
+  //   image: image14,
+  //   category: "bahasaProgram",
+  // },
   {
-    id: 14,
-    name: "Python",
-    image: image14,
-    category: "bahasaProgram",
-  },
-  {
-    id: 15,
+    id: 11,
     name: "API",
     image: image15,
     category: "tool",
   },
   {
-    id: 16,
+    id: 12,
     name: "Github",
     image: image16,
     category: "tool",
   },
   {
-    id: 17,
+    id: 13,
     name: "Kotlin",
     image: image17,
     category: "bahasaProgram",
   },
   {
-    id: 18,
+    id: 14,
     name: "Tailwind",
     image: image18,
     category: "tool",
@@ -254,5 +262,15 @@ export const porto = [
     link: "https://fadelyunus07.github.io/noobar-react/",
     tekno: ["React", "JavaScript", "Tailwind", "API"],
     fitur: ["Menampilkan Movie", "Menampilkan TV Series", "Pencarian", "Trailer", "Preview Film"],
+  },
+  {
+    id: 6,
+    allImg: [kreatif1, kreatif2, kreatif3, kreatif4, kreatif5, kreatif6],
+    emoji: "fa fa-building fa-5x",
+    title: "Kreatif Mediatama",
+    text: "Sebuah Website Company Profile",
+    link: "https://kreatifmediatama.com/",
+    tekno: ["React", "JavaScript", "Tailwind"],
+    fitur: ["Responsive", "Image Slider", "Gallery Layanan", "Gallery Foto", "Scroll to Top", "Whatsapp Button"],
   },
 ];

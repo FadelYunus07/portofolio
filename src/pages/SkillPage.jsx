@@ -43,7 +43,7 @@ const SkillPage = () => {
             </Nav>
           </Row>
 
-          <Row className="justify-content-center ms-0 p-5">
+          <Row className="justify-content-center p-5">
             {filteredSkills.map((skills) => {
               return (
                 <div key={skills.id} className="card-box shadow" data-aos="flip-left" data-aos-duration="1000">
